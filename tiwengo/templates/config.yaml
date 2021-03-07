@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "tiwengo.fullname" . }}
+data:
+  GIN_MODE: {{ .Values.configMap.mode }}
+  TIWENGO_BASE_URL: {{ .Values.configMap.tiwengo.baseUrl }}
+  TIWENGO_SHORT_URL: {{ .Values.configMap.tiwengo.shortUrl }}
+  TCCG_BASE_URL: {{ .Values.configMap.tccgUrl }}
+  DB_HOST: {{ .Values.configMap.db.host }}
+  DB_NAME: {{ .Values.configMap.db.name }}
+  REDIS_HOST: {{ .Values.configMap.redis.host }}

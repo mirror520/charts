@@ -1,0 +1,16 @@
+apiVersion: v2
+name: tiwengo
+description: 臺中市政府防疫追蹤溯源實名登記 API
+type: application
+version: 0.1.0
+appVersion: 1.3.0
+keywords:
+  - tiwengo
+  - tiwenpass
+home: https://tccgov.tw/
+sources:
+  - https://github.com/mirror520/tiwengo
+  - https://github.com/mirror520/tiwenpass
+maintainers:
+  - name: Lin, Ying-Chin
+  - email: mirror770109@gmail.com

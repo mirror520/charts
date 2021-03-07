@@ -1,0 +1,21 @@
+{{- if .Values.cronJob.enabled -}}
+{{- $fullName := include "tiwengo.fullname" . -}}
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ $fullName }}
+spec:
+  schedule: "0 6 * * *"    # at 06:00, UTC+8
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: curl
+            image: curlimages/curl:7.70.0
+            args:
+            - -X
+            - DELETE
+            - http://{{ $fullName }}:9000/api/v1/guests/today/visits
+          restartPolicy: OnFailure
+{{- end }}
