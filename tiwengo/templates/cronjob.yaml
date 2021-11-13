@@ -5,7 +5,7 @@ kind: CronJob
 metadata:
   name: {{ $fullName }}
 spec:
-  schedule: "0 6 * * *"    # at 06:00, UTC+8
+  schedule: {{ .Values.cronJob.schedule | quote }}
   jobTemplate:
     spec:
       template:
