@@ -3,9 +3,9 @@ entries:
   identity:
   - apiVersion: v2
     appVersion: v0.1.1
-    created: "2023-05-07T19:44:00.587318725+08:00"
+    created: "2023-05-07T17:38:50.78870637Z"
     description: manage user authentication and authorization
-    digest: f79a0cd3c32fd03a767aac057dd63702a931a16bdc99fe204cc6ebef68605c55
+    digest: 9429401df11775edddb4c182d618f5bfc005df336e1b8265860182f4a5219c5c
     home: https://identity.linyc.idv.tw/
     keywords:
     - identity
@@ -19,4 +19,4 @@ entries:
     urls:
     - https://mirror520.github.io/charts/identity/identity-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-07T19:44:00.586269662+08:00"
+generated: "2023-05-07T17:38:50.77555725Z"
