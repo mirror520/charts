@@ -1,0 +1,59 @@
+name: Release Charts
+
+on: 
+  workflow_dispatch:
+    inputs:
+      target_chart:
+        description: Select a chart
+        required: true
+        type: choice
+        options:
+        - identity
+      app_version:
+        description: Chart app version
+        required: true
+        type: string
+      git_commit:
+        description: Release commit
+        required: true
+        type: string
+      username:
+        description: Git Username
+        required: false
+        type: string
+        default: 'Lin, Ying-Chin'
+      email:
+        description: Git Email
+        required: false
+        type: string
+        default: 'mirror770109@gmail.com'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Import SSH key
+        mkdir -p /home/runner/.ssh
+        echo "${{ secrets.SSH_KEY }}" > /home/runner/.ssh/id_rsa
+        chmod 600 /home/runner/.ssh/id_rsa
+      
+    - name: Configure Git
+      run: |
+        git config user.name  ${{ github.event.inputs.username }}
+        git config user.email ${{ github.event.inputs.email }} 
+        git remote set-url origin git@github.com:mirror520/charts.git
+
+    - name: Helm Package
+      run: |
+        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+        helm package ${{ github.event.inputs.target_chart }}/ --app-version ${{ github.event.input.app_version }} -d docs/${{ github.event.inputs.target_chart }}/
+        helm repo index docs --url https://mirror520.github.io/charts/ --merge docs/index.yaml
+    
+    - name: Release to Github Pages
+      run: |
+        git add .
+        git commit -m ${{ github.event.inputs.git_commit }}
+        git push origin main
