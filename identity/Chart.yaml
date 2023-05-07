@@ -3,7 +3,7 @@ name: identity
 description: manage user authentication and authorization
 type: application
 version: 0.1.0
-appVersion: "0.1.1"
+appVersion: "v0.1.1"
 keywords:
   - identity
 home: https://identity.linyc.idv.tw/
