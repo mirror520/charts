@@ -36,6 +36,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Import SSH key
+      run: |
         mkdir -p /home/runner/.ssh
         echo "${{ secrets.SSH_KEY }}" > /home/runner/.ssh/id_rsa
         chmod 600 /home/runner/.ssh/id_rsa
