@@ -1,14 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "tiwengo.fullname" . }}
+  name: {{ include "identity.fullname" . }}
   labels:
-    {{- include "tiwengo.labels" . | nindent 4 }}
+    {{- include "identity.labels" . | nindent 4 }}
 spec:
-  replicas: 1
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
   selector:
     matchLabels:
-      {{- include "tiwengo.selectorLabels" . | nindent 6 }}
+      {{- include "identity.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -16,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "tiwengo.selectorLabels" . | nindent 8 }}
+        {{- include "identity.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "tiwengo.serviceAccountName" . }}
+      serviceAccountName: {{ include "identity.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -32,26 +34,19 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: external
-              containerPort: 6080
+            - name: http
+              containerPort: {{ .Values.service.port }}
               protocol: TCP
-            - name: internal
-              containerPort: 9000
-              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          volumeMounts:
-            - name: tz-config
-              mountPath: /etc/localtime
-          envFrom:
-            - configMapRef:
-                name: {{ include "tiwengo.fullname" . }}
-            - secretRef:
-                name:  {{ include "tiwengo.fullname" . }}
-      volumes:
-      - name: tz-config
-        hostPath:
-          path: /usr/share/zoneinfo/Asia/Taipei
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
