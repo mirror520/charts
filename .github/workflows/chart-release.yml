@@ -50,7 +50,7 @@ jobs:
     - name: Helm Package
       run: |
         curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-        helm package ${{ github.event.inputs.target_chart }}/ --app-version ${{ github.event.input.app_version }} -d docs/${{ github.event.inputs.target_chart }}/
+        helm package ${{ github.event.inputs.target_chart }}/ --app-version ${{ github.event.inputs.app_version }} -d docs/${{ github.event.inputs.target_chart }}/
         helm repo index docs --url https://mirror520.github.io/charts/ --merge docs/index.yaml
     
     - name: Release to Github Pages
