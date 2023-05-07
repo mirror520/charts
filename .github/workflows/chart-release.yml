@@ -56,5 +56,5 @@ jobs:
     - name: Release to Github Pages
       run: |
         git add .
-        git commit -m ${{ github.event.inputs.git_commit }}
+        git commit -m "${{ github.event.inputs.git_commit }}"
         git push origin main
