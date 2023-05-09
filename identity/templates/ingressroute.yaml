@@ -1,0 +1,34 @@
+{{- if .Values.ingressRoute.enabled -}}
+{{- $fullName := include "identity.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{- include "identity.labels" . | nindent 4 }}
+  {{- with .Values.ingressRoute.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  entryPoints:
+  {{- range .Values.ingressRoute.entryPoints }}
+  - {{ . }}
+  {{- end }}
+  routes:
+  - match: {{ .Values.ingressRoute.matchRule }}
+    kind: Rule
+    services:
+    - name: identity
+      port: http
+    {{- with .Values.ingressRoute.middlewares }}
+    middlewares:
+      {{- toYaml . | nindent 4 }}
+    {{- end -}}
+
+  {{- with .Values.ingressRoute.tls }}
+  tls:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+{{- end }}
