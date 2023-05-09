@@ -13,8 +13,8 @@ on:
         description: Chart app version
         required: true
         type: string
-      git_commit:
-        description: Release commit
+      message:
+        description: Commit message 
         required: true
         type: string
       username:
@@ -56,5 +56,5 @@ jobs:
     - name: Release to Github Pages
       run: |
         git add .
-        git commit -m "${{ github.event.inputs.git_commit }}"
+        git commit -m "${{ github.event.inputs.message }}"
         git push origin main
