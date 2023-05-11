@@ -56,13 +56,20 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+# Create an IngressRoute for the identity
 ingressRoute:
+  # Enable traefik ingress route
   enabled: false
+  # IngressRoute is the CRD implementation of a Traefik HTTP Router.
   annotations: {}
     # kubernetes.io/ingress.class: traefik
+  # Specify the allowed entrypoints to use for the identity ingress route
   entryPoints: ["web", "websecure"] 
+  # The router match rule used for the dashboard ingressRoute
   matchRule: Host(`identity.kube.internal`)
+  # Additional ingressRoute middlewares (e.g. for authentication)
   middlewares: []
+  # TLS options (e.g. secret containing certificate)
   tls: {}
 
 resources: {}
@@ -89,3 +96,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+nats:
+  enabled: false
