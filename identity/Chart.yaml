@@ -2,8 +2,8 @@ apiVersion: v2
 name: identity
 description: manage user authentication and authorization
 type: application
-version: 0.1.1
-appVersion: "0.1.1"
+version: 0.1.2
+appVersion: "0.1.3"
 keywords:
   - identity
 home: https://identity.linyc.idv.tw/
