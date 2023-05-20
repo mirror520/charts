@@ -33,7 +33,7 @@ entries:
       repository: https://nats-io.github.io/k8s/helm/charts/
       version: 0.19.*
     description: manage user authentication and authorization
-    digest: cd5778ada86d649a17aa7db4f2f9f7e6a0ecc099a587112b15a2114632e122a6
+    digest: a78906451598ae0d2d40b105b708d4eb203f3d00e4dff892b6e2651fbc5b57e3
     home: https://identity.linyc.idv.tw/
     keywords:
     - identity
