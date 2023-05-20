@@ -48,11 +48,32 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
+            - name: tz-config
+              mountPath: /etc/localtime
+              readOnly: true
+            - name: config
+              mountPath: /root/.identity
+              readOnly: true
             - name: data
               mountPath: {{ .Values.persistence.path }}
               {{- if .Values.persistence.subPath }}
               subPath: {{ .Values.persistence.subPath }}
               {{- end }}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          envFrom:
+            - secretRef:
+                name: identity
+      volumes:
+        - name: tz-config
+          hostPath:
+            path: /usr/share/zoneinfo/Asia/Taipei
+        - name: config
+          configMap:
+            name: identity
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
