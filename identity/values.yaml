@@ -85,10 +85,10 @@ persistence:
   # subPath: "" # only mount a subpath of the Volume into the pod
 
 configs:
-  name: $(POD_NAME)
+  name: $POD_NAME
   baseUrl: identity.kube.internal
   jwt:
-    secret: $(JWT_SECRET_KEY)
+    secret: $JWT_SECRET_KEY
     timeout: 1h
     refresh:
       enabled: true
@@ -112,7 +112,7 @@ configs:
             ]
           }
       consumer:
-        name: identity-1
+        name: $POD_NAME
         stream: USERS
         config: |
           {
@@ -121,8 +121,8 @@ configs:
   providers:
     google:
       client: 
-        id: $(GOOGLE_CLIENT_ID)
-        secret: $(GOOGLE_CLIENT_SECRET)
+        id: $GOOGLE_CLIENT_ID
+        secret: $GOOGLE_CLIENT_SECRET
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
