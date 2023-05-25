@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: {{ include "identity.fullname" . }}
   labels:
-    {{- include "identity.labels" . | nindent 4 }}
+    {{- include "identity.selectorLabels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -31,7 +31,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default (trimPrefix "v" .Chart.AppVersion) }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
@@ -95,7 +95,7 @@ spec:
         {{- toYaml . | nindent 10 }}
         {{- end }}
         labels:
-          {{- include "identity.labels" . | nindent 10 }}
+          {{- include "identity.selectorLabels" . | nindent 10 }}
       spec:
         accessModes:
           - {{ .Values.persistence.accessMode }}
