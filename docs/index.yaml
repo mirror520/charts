@@ -3,7 +3,30 @@ entries:
   identity:
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2023-05-25T19:55:03.556533877+08:00"
+    created: "2023-05-25T21:08:39.239370362+08:00"
+    dependencies:
+    - condition: nats.enabled
+      name: nats
+      repository: https://nats-io.github.io/k8s/helm/charts/
+      version: 0.19.*
+    description: Scalable and decentralized user identity management
+    digest: 77bdae6b77040b9ffc3a52d586f88c1a0a3092d571a9ef3d325a0c1d85df8bcb
+    home: https://identity.linyc.idv.tw/
+    keywords:
+    - identity
+    maintainers:
+    - email: mirror770109@gmail.com
+      name: Lin, Ying-Chin
+    name: identity
+    sources:
+    - https://github.com/mirror520/identity
+    type: application
+    urls:
+    - https://mirror520.github.io/charts/identity/identity-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2023-05-25T21:08:39.233921929+08:00"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -26,7 +49,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-25T19:55:03.552983641+08:00"
+    created: "2023-05-25T21:08:39.229659834+08:00"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -49,7 +72,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.1.5
-    created: "2023-05-25T19:55:03.54933385+08:00"
+    created: "2023-05-25T21:08:39.225345988+08:00"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -72,7 +95,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-05-25T19:55:03.545080186+08:00"
+    created: "2023-05-25T21:08:39.221194635+08:00"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -95,7 +118,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-05-25T19:55:03.539536092+08:00"
+    created: "2023-05-25T21:08:39.215196829+08:00"
     description: manage user authentication and authorization
     digest: 18658aa55786f0285fe543f507318ebdbe2226a6612d1f5279489f9bb834e12a
     home: https://identity.linyc.idv.tw/
@@ -113,7 +136,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2023-05-25T19:55:03.53840791+08:00"
+    created: "2023-05-25T21:08:39.214116259+08:00"
     description: manage user authentication and authorization
     digest: 8164dddc5f26685b08d25d3f5de6190ef27c557c0357c8fce6c929515dae6854
     home: https://identity.linyc.idv.tw/
@@ -129,4 +152,4 @@ entries:
     urls:
     - https://mirror520.github.io/charts/identity/identity-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-25T19:55:03.537049978+08:00"
+generated: "2023-05-25T21:08:39.212629163+08:00"
