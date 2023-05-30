@@ -73,6 +73,14 @@ ingressRoute:
   # TLS options (e.g. secret containing certificate)
   tls: {}
 
+envFrom:
+  - secretRef:
+      name: identity
+      optional: true
+  # - secretRef:
+  #     name: consul
+  #     optional: false
+
 persistence:
   enabled: true
   name: data
@@ -86,7 +94,8 @@ persistence:
   # subPath: "" # only mount a subpath of the Volume into the pod
 
 configs:
-  name: $POD_NAME
+  name: $HOSTNAME
+  address: $NODE_NAME
   baseUrl: identity.kube.internal
   jwt:
     secret: $JWT_SECRET_KEY
@@ -113,7 +122,7 @@ configs:
             ]
           }
       consumer:
-        name: $POD_NAME
+        name: $HOSTNAME
         stream: USERS
         config: |
           {

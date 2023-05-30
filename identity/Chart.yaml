@@ -2,8 +2,8 @@ apiVersion: v2
 name: identity
 description: Scalable and decentralized user identity management
 type: application
-version: 0.1.6
-appVersion: "v1.0.0"
+version: 0.1.7
+appVersion: "v1.0.1"
 keywords:
   - identity
 home: https://identity.linyc.idv.tw/

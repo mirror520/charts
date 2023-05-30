@@ -60,17 +60,18 @@ spec:
               subPath: {{ .Values.persistence.subPath }}
               {{- end }}
           env:
-            - name: POD_NAME
+            - name: NODE_NAME
               valueFrom:
                 fieldRef:
-                  fieldPath: metadata.name
+                  fieldPath: spec.nodeName
+          {{- with .Values.envFrom }}
           envFrom:
-            - secretRef:
-                name: identity
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
       volumes:
         - name: tz-config
           hostPath:
-            path: /usr/share/zoneinfo/Asia/Taipei
+            path: /etc/localtime
         - name: config
           configMap:
             name: identity
