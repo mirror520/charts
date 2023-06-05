@@ -95,7 +95,10 @@ persistence:
 
 configs:
   name: $HOSTNAME
-  address: $NODE_NAME
+  # external:
+  #   scheme: http
+  #   address: identity.namespace.svc.cluster.local
+  #   port: 80
   baseUrl: identity.kube.internal
   jwt:
     secret: $JWT_SECRET_KEY
