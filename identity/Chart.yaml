@@ -2,7 +2,7 @@ apiVersion: v2
 name: identity
 description: Scalable and decentralized user identity management
 type: application
-version: 0.1.10
+version: 0.1.11
 appVersion: "v1.0.2"
 keywords:
   - identity
