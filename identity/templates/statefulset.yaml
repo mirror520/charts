@@ -69,7 +69,7 @@ spec:
             path: /etc/localtime
         - name: config
           configMap:
-            name: identity
+            name: {{ include "identity.fullname" . }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

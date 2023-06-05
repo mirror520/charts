@@ -1,6 +1,3 @@
-{{- if .Values.ingressRoute.enabled -}}
-{{- $fullName := include "identity.fullname" . -}}
-{{- $svcPort := .Values.service.port -}}
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
@@ -20,7 +17,7 @@ spec:
   - match: {{ .Values.ingressRoute.matchRule }}
     kind: Rule
     services:
-    - name: identity
+    - name: {{ include "identity.fullname" . }}
       port: http
     {{- with .Values.ingressRoute.middlewares }}
     middlewares:
