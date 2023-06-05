@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: {{ $fullName }}
+  name: {{ include "identity.fullname" . }}
   labels:
     {{- include "identity.labels" . | nindent 4 }}
   {{- with .Values.ingressRoute.annotations }}
@@ -28,4 +28,3 @@ spec:
   tls:
     {{- toYaml . | nindent 4 }}
   {{- end }}
-{{- end }}
