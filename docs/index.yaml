@@ -2,15 +2,15 @@ apiVersion: v1
 entries:
   identity:
   - apiVersion: v2
-    appVersion: v1.0.3
-    created: "2023-10-01T06:03:42.817545201Z"
+    appVersion: v1.0.4
+    created: "2023-10-01T08:44:48.597675484Z"
     dependencies:
     - condition: nats.enabled
       name: nats
       repository: https://nats-io.github.io/k8s/helm/charts/
       version: 0.19.*
     description: Scalable and decentralized user identity management
-    digest: 7bfa56a4c38b1cdb098243895f34e50fdda91de39416f16aade8da1e234fc422
+    digest: 36df0db2d7738db4f50c2e248221fcd1a7c6911e6852bfa9a0fb797e43dc8124
     home: https://identity.linyc.idv.tw/
     keywords:
     - identity
@@ -26,7 +26,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T06:03:42.814959724Z"
+    created: "2023-10-01T08:44:48.592654756Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -49,7 +49,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T06:03:42.8396112Z"
+    created: "2023-10-01T08:44:48.624943835Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -72,7 +72,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T06:03:42.837093123Z"
+    created: "2023-10-01T08:44:48.62056771Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -95,7 +95,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T06:03:42.833600255Z"
+    created: "2023-10-01T08:44:48.617606794Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -118,7 +118,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: v1.0.1
-    created: "2023-10-01T06:03:42.831070978Z"
+    created: "2023-10-01T08:44:48.614533677Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -141,7 +141,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2023-10-01T06:03:42.8286243Z"
+    created: "2023-10-01T08:44:48.61146396Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -164,7 +164,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-01T06:03:42.826155623Z"
+    created: "2023-10-01T08:44:48.607052436Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -187,7 +187,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.1.5
-    created: "2023-10-01T06:03:42.822918852Z"
+    created: "2023-10-01T08:44:48.604002519Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -210,7 +210,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-10-01T06:03:42.81989078Z"
+    created: "2023-10-01T08:44:48.601007502Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -233,7 +233,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-10-01T06:03:42.806310503Z"
+    created: "2023-10-01T08:44:48.589311737Z"
     description: manage user authentication and authorization
     digest: 18658aa55786f0285fe543f507318ebdbe2226a6612d1f5279489f9bb834e12a
     home: https://identity.linyc.idv.tw/
@@ -251,7 +251,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2023-10-01T06:03:42.805783208Z"
+    created: "2023-10-01T08:44:48.588667534Z"
     description: manage user authentication and authorization
     digest: 8164dddc5f26685b08d25d3f5de6190ef27c557c0357c8fce6c929515dae6854
     home: https://identity.linyc.idv.tw/
@@ -267,4 +267,4 @@ entries:
     urls:
     - https://mirror520.github.io/charts/identity/identity-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-01T06:03:42.805101914Z"
+generated: "2023-10-01T08:44:48.587808829Z"
