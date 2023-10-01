@@ -106,7 +106,13 @@ configs:
     refresh:
       enabled: true
       maximum: 1h30m
-  persistent:
+  transport:
+    nats:
+      enabled: true
+      reqPrefix: identity.$HOSTNAME
+    loadBalancing:
+      enabled: false
+  persistence:
     driver: sqlite
     name: users
     host: /data
