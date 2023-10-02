@@ -2,15 +2,15 @@ apiVersion: v1
 entries:
   identity:
   - apiVersion: v2
-    appVersion: v1.0.4
-    created: "2023-10-01T17:02:28.942444456+08:00"
+    appVersion: v1.0.5
+    created: "2023-10-02T11:29:32.867836039Z"
     dependencies:
     - condition: nats.enabled
       name: nats
       repository: https://nats-io.github.io/k8s/helm/charts/
       version: 0.19.*
     description: Scalable and decentralized user identity management
-    digest: 715d85a99b015604908303fba5b4fb758f11c054a9bc7698200fb87468e3db9f
+    digest: b195b4b9cb445121556f1bd527187059f9641c1573b8b696c0ded75ab83f340c
     home: https://identity.linyc.idv.tw/
     keywords:
     - identity
@@ -26,7 +26,7 @@ entries:
     version: 0.1.12
   - apiVersion: v2
     appVersion: v1.0.4
-    created: "2023-10-01T17:02:28.937482931+08:00"
+    created: "2023-10-02T11:29:32.864800849Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -49,7 +49,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T17:02:28.933815759+08:00"
+    created: "2023-10-02T11:29:32.862178959Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -72,7 +72,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T17:02:28.984000114+08:00"
+    created: "2023-10-02T11:29:32.891159056Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -95,7 +95,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T17:02:28.979895365+08:00"
+    created: "2023-10-02T11:29:32.888562865Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -118,7 +118,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-01T17:02:28.97289825+08:00"
+    created: "2023-10-02T11:29:32.885955674Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -141,7 +141,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: v1.0.1
-    created: "2023-10-01T17:02:28.968752718+08:00"
+    created: "2023-10-02T11:29:32.882559986Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -164,7 +164,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2023-10-01T17:02:28.963993031+08:00"
+    created: "2023-10-02T11:29:32.879347198Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -187,7 +187,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-01T17:02:28.959264793+08:00"
+    created: "2023-10-02T11:29:32.876742607Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -210,7 +210,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.1.5
-    created: "2023-10-01T17:02:28.954554715+08:00"
+    created: "2023-10-02T11:29:32.874106516Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -233,7 +233,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-10-01T17:02:28.947452415+08:00"
+    created: "2023-10-02T11:29:32.871324626Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -256,7 +256,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-10-01T17:02:28.928338743+08:00"
+    created: "2023-10-02T11:29:32.859461368Z"
     description: manage user authentication and authorization
     digest: 18658aa55786f0285fe543f507318ebdbe2226a6612d1f5279489f9bb834e12a
     home: https://identity.linyc.idv.tw/
@@ -274,7 +274,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2023-10-01T17:02:28.926902393+08:00"
+    created: "2023-10-02T11:29:32.85889627Z"
     description: manage user authentication and authorization
     digest: 8164dddc5f26685b08d25d3f5de6190ef27c557c0357c8fce6c929515dae6854
     home: https://identity.linyc.idv.tw/
@@ -290,4 +290,4 @@ entries:
     urls:
     - https://mirror520.github.io/charts/identity/identity-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-01T17:02:28.925214659+08:00"
+generated: "2023-10-02T11:29:32.858211573Z"
