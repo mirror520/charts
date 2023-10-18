@@ -2,15 +2,15 @@ apiVersion: v1
 entries:
   identity:
   - apiVersion: v2
-    appVersion: v1.0.5
-    created: "2023-10-02T11:29:32.867836039Z"
+    appVersion: v1.0.6
+    created: "2023-10-18T12:34:46.559725578Z"
     dependencies:
     - condition: nats.enabled
       name: nats
       repository: https://nats-io.github.io/k8s/helm/charts/
       version: 0.19.*
     description: Scalable and decentralized user identity management
-    digest: b195b4b9cb445121556f1bd527187059f9641c1573b8b696c0ded75ab83f340c
+    digest: e5d8d636a94a082544f2e2d269457632e8e3f3143456568c975b2df221f0443d
     home: https://identity.linyc.idv.tw/
     keywords:
     - identity
@@ -26,7 +26,7 @@ entries:
     version: 0.1.12
   - apiVersion: v2
     appVersion: v1.0.4
-    created: "2023-10-02T11:29:32.864800849Z"
+    created: "2023-10-18T12:34:46.550884991Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -49,7 +49,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-02T11:29:32.862178959Z"
+    created: "2023-10-18T12:34:46.548259195Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -72,7 +72,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-02T11:29:32.891159056Z"
+    created: "2023-10-18T12:34:46.584009141Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -95,7 +95,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-02T11:29:32.888562865Z"
+    created: "2023-10-18T12:34:46.581494045Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -118,7 +118,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-10-02T11:29:32.885955674Z"
+    created: "2023-10-18T12:34:46.578940249Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -141,7 +141,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: v1.0.1
-    created: "2023-10-02T11:29:32.882559986Z"
+    created: "2023-10-18T12:34:46.576231553Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -164,7 +164,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2023-10-02T11:29:32.879347198Z"
+    created: "2023-10-18T12:34:46.573682057Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -187,7 +187,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-02T11:29:32.876742607Z"
+    created: "2023-10-18T12:34:46.567331566Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -210,7 +210,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.1.5
-    created: "2023-10-02T11:29:32.874106516Z"
+    created: "2023-10-18T12:34:46.56481317Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -233,7 +233,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-10-02T11:29:32.871324626Z"
+    created: "2023-10-18T12:34:46.562131774Z"
     dependencies:
     - condition: nats.enabled
       name: nats
@@ -256,7 +256,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-10-02T11:29:32.859461368Z"
+    created: "2023-10-18T12:34:46.544940801Z"
     description: manage user authentication and authorization
     digest: 18658aa55786f0285fe543f507318ebdbe2226a6612d1f5279489f9bb834e12a
     home: https://identity.linyc.idv.tw/
@@ -274,7 +274,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2023-10-02T11:29:32.85889627Z"
+    created: "2023-10-18T12:34:46.544406901Z"
     description: manage user authentication and authorization
     digest: 8164dddc5f26685b08d25d3f5de6190ef27c557c0357c8fce6c929515dae6854
     home: https://identity.linyc.idv.tw/
@@ -290,4 +290,4 @@ entries:
     urls:
     - https://mirror520.github.io/charts/identity/identity-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-02T11:29:32.858211573Z"
+generated: "2023-10-18T12:34:46.543729602Z"
